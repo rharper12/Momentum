@@ -74,6 +74,9 @@
   "jun": "Jun",
 
   "missingUrlField": "missing url field",
-  "missingHeadersField": "missing headers Field"
+  "missingHeadersField": "missing headers Field",
+
+  "now": "Now",
+  "today": "Today"
 
 }
