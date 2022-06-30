@@ -18,7 +18,7 @@ export const getDaysOfTheWeek = (dayNumber) => {
 
 export const convertUnixTimeStampToDayOfWeek = (unixTimeStamp) => {
     if (!unixTimeStamp)
-        return txt.missingData
+        return txt.invalidParam
 
     let newDate = new Date(unixTimeStamp * 1000);
     let dayOfTheWeek = getDaysOfTheWeek(newDate.getDay())
@@ -27,6 +27,8 @@ export const convertUnixTimeStampToDayOfWeek = (unixTimeStamp) => {
 }
 
 export const convertUnixTimeStampTo12hrFormat = (unixTimeStamp) => {
+    if (!unixTimeStamp)
+        return txt.invalidParam
     let newDate = new Date(unixTimeStamp * 1000);
     return newDate.toLocaleString('en-US', {hour: 'numeric', hour12: true, timeZone: "CET"})
 }
