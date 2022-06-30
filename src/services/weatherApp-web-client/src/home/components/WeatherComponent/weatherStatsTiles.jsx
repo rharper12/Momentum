@@ -7,6 +7,7 @@ import {MdVisibility} from "react-icons/md";
 import {FaTemperatureHigh} from "react-icons/fa";
 import {IoIosSpeedometer} from "react-icons/io";
 import txt from "../../../common/text.json"
+import {convertUnixTimeStampTo12hrFormat, getArrOfCompassDirections} from "../../../common/generalFunctions";
 
 const getUVindexLabel = (uvIndexNumber) => {
     if (uvIndexNumber < 0 || uvIndexNumber > 10)
@@ -24,13 +25,7 @@ const getUVindexLabel = (uvIndexNumber) => {
     return txt.missingData;
 }
 
-const unixTimeStampTo12hrTime = (unixTimestamp) => {
-    const time = new Date(unixTimestamp * 1000);
-    return time.toLocaleString('en-US', {hour: 'numeric', hour12: true, timeZone: "CET"})
-}
-
 const renderUVIndexTile = (uviIndex) => {
-
     return (
         <div className="squareTiles width45">
             <BsFillSunFill className={"reactIconsSquareTiles"}/>
@@ -55,7 +50,6 @@ const renderSunsetSunriseTile = (sunrise , sunset) => {
             <label>
                 {txt.sunrise}: {sunrise}
             </label>
-
         </div>
     )
 }
@@ -140,9 +134,6 @@ const renderRainfallTile = (rain) => {
                 {txt.RainFall}
             </label>
             <div className="weatherStatsTileValue">{rain}"</div>
-            {/* <label>
-                {(txt.expected).toLowerCase()}
-            </label>*/}
         </div>
     )
 }
@@ -154,20 +145,21 @@ const getCompassDirection = (windDegree) => {
     3) Truncate the value using integer division (so there is no rounding).
     4) Directly index into the array and print the value (mod 16).
     */
-    const value = Math.floor((windDegree / 22.5) + 0.5);
-    const compass = ["N", "NNE", "NE", "ENE", "E", "ESE", "SE", "SSE", "S", "SSW", "SW", "WSW", "W", "WNW", "NW", "NNW"];
-    return compass[(value % 16)];
+    const value = Math.floor((windDegree / 22.5) + 0.5)
+    const compass = getArrOfCompassDirections()
+    return compass[(value % 16)]
 }
 
+// stateless component
 const WeatherStatsComponent = (weatherObj) => {
     let todaysUvIndex = (weatherObj.hasOwnProperty("uvi")) ?
         weatherObj.uvi : -1
 
     let todaysSunriseTime = (weatherObj.hasOwnProperty("sunrise")) ?
-        unixTimeStampTo12hrTime(weatherObj.sunrise) : txt.missingData
+        convertUnixTimeStampTo12hrFormat(weatherObj.sunrise) : txt.missingData
 
     let todaysSunsetTime = (weatherObj.hasOwnProperty("sunset")) ?
-        unixTimeStampTo12hrTime(weatherObj.sunset) : txt.missingData
+        convertUnixTimeStampTo12hrFormat(weatherObj.sunset) : txt.missingData
 
     let feelsLike = (weatherObj.hasOwnProperty("feels_like")) ?
         Math.round(weatherObj.feels_like) : txt.missingData

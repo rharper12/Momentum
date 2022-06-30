@@ -70,5 +70,11 @@
   "oct": "Oct",
   "nov": "Nov",
   "dec": "Dec",
-  "jun": "Jun"
+  "jun": "Jun",
+
+  "missingUrlField": "Missing URL field",
+  "missingMethodField": "Missing Method field",
+  "missingHeadersField": "MissingHeadersField"
+
+
 }
