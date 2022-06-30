@@ -3,6 +3,7 @@
   "todaysHighLabel": "H",
   "todaysLowLabel": "L",
   "missingData": "none",
+  "invalidParam": "invalid param supplied",
   "uvIndex": "UV Index",
   "low": "Low",
   "high": "High",
@@ -72,9 +73,7 @@
   "dec": "Dec",
   "jun": "Jun",
 
-  "missingUrlField": "Missing URL field",
-  "missingMethodField": "Missing Method field",
-  "missingHeadersField": "MissingHeadersField"
-
+  "missingUrlField": "missing url field",
+  "missingHeadersField": "missing headers Field"
 
 }
