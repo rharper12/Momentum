@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import "normalize.css"
+// Importing the Bootstrap CSS
+import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+import WeatherAppComponent from "./services/weatherApp-web-client/src/home/home";
+import {QueryClient, QueryClientProvider} from "react-query";
+// Create a client
+const queryClient = new QueryClient()
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+      <QueryClientProvider client={queryClient}>
+          <WeatherAppComponent />
+      </QueryClientProvider>
   </React.StrictMode>
 );
 

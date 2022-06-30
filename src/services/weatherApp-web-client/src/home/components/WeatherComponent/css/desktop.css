@@ -1,0 +1,62 @@
+
+@media only screen and (min-width: 1000px) {
+
+    body {
+        background: #18181A;
+    }
+
+    .airQualityImg {
+        max-width: 100px;
+        max-height: 300px;
+    }
+
+    .searchBarContainer {
+        position: absolute;
+        right: -6rem;
+        top: -.5rem;
+    }
+
+    .img-container {
+        margin-top: 0;
+
+        max-height: 800px;
+    }
+
+    .desktopWidth {
+        max-width: 640px;
+    }
+
+    .rectangleTileDesktopHeight {
+        /*
+        max-height: 360px;
+        */
+        max-height:  320px;
+    }
+
+    .rectangleTilesContainer {
+        padding: 1rem 0;
+    }
+
+  /*  .currentWeatherImgContainer{
+        justify-content: flex;
+    }*/
+
+    .mainContentCard {
+        width: 90%;
+        background: #282c34;
+        color: white;
+        border-radius: 1rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 60px;
+        overflow-y: auto;
+    }
+
+    .forecastDescription {
+        display: inline-block;
+    }
+
+}
+

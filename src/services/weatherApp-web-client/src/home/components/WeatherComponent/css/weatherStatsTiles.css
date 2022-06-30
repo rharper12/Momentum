@@ -1,0 +1,116 @@
+.squareTileContainer{
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: .5rem 0;
+    overflow:auto;
+
+}
+
+.width45 {
+    width: 45%;
+}
+
+.boxShadow {
+    box-shadow: black 0 4px 12px
+}
+
+.squareTiles {
+    padding: 1rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    box-shadow: black 0 4px 12px;
+}
+
+.rectangleTilesContainer {
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    overflow: auto;
+    box-shadow: black 0 4px 12px;
+}
+
+.searchBarContainer {
+    border-radius: 1rem;
+    padding-top: 1.5rem;
+}
+
+.weatherStatsTileValue{
+    font-size: 2.4rem;
+}
+
+.reactIconsSquareTiles {
+    margin-right: 5px;
+    vertical-align: center;
+}
+
+.currentWeatherImgContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem;
+    border-radius: 1rem;
+    /*
+    box-shadow: black 0px 4px 12px;
+    */
+
+}
+
+.currentWeatherImg {
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    max-width:420px;
+}
+
+
+
+@media screen and (min-width: 1600px) {
+    .width45 {
+        width:20%;
+   }
+
+    .column2{
+        margin-top:0;
+    }
+
+    .test {
+        max-width: 700px;
+    }
+
+
+}
+
+
+@media screen and (min-width: 780px){
+    .column2{
+        margin-top:3%;
+    }
+
+    .searchBarContainer {
+        position: absolute;
+        left: 4rem;
+    }
+
+    .squareTileContainer {
+        margin-top: 2%;
+    }
+
+    .airQualityScaleContainer {
+        height: 15px;
+        padding-bottom: 4px;
+        width: 100%;
+    }
+
+    .airQualityScaleSvg {
+        display: block;
+        border-radius: 4px;
+    }
+
+
+}
