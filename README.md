@@ -6,7 +6,7 @@ To run this project, you will need your own API key from OpenWeatherMap. Once yo
 
 Momentum serves as a minimum viable product to demonstrate ReactJs competency. 
 
-**Future Improvements: **
+Future Improvements: 
 
  * Expandable search bar & search ability
  * Animated icon for the current weather
