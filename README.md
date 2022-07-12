@@ -2,7 +2,7 @@
 
 Momentum is a responsive weather application built using ReactJs for mobile, tablets, and laptops. This project leverages the OpenWeatherMap API to relay weather information to the user. 
 
-To run this project, you will need your own API key from OpenWeatherMap. Once you have your key, insert it into the ".env" file in the project. Run NPM install & then NPM start. If data does not load for you, ensure your API key is correct. Currently, the UI is coded to only display data for Heidenheim, Germany.
+To run this project, you will need your own API key from OpenWeatherMap & a subscription to OpenWeather OneCall API. Once you have your key, insert it into the ".env" file in the project. Run NPM install & then NPM start. If data does not load for you, ensure your API key is correct. Currently, the UI is coded to only display data for Heidenheim, Germany.
 
 Momentum serves as a minimum viable product to demonstrate ReactJs competency. 
 
